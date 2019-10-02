@@ -1,0 +1,1 @@
+<div> a pesquisa foi  {{ $q }}</div>
