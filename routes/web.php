@@ -107,4 +107,3 @@ Route::get('/noticias/{id}/{titulo}', function ($id , $titulo) {
 Route::get('/noticias',"NoticiasController@index");
 
 Route::get('/model-env',"EnvController@index");
-
