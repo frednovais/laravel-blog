@@ -78,11 +78,11 @@ Route::get('/registo', function () {
     return 'Registo';
 });
 
-Route::get('/search', function () {
+Route::get('/search1', function () {
     return view("pesquisa");
 });
 
-Route::post('/search', function () {
+Route::post('/search1', function () {
     return view("pesquisaresult", ['texto' => $_POST["name"]]);//'<div> Pesquisa por : '..'</div>';
 });
 
@@ -95,6 +95,9 @@ Route::get('/noticias/{id}/{titulo}', function ($id , $titulo) {
 });
 
 
+Route::get('/search', "SearchController@index");
+
+Route::post('/search', "SearchController@pesquisa");
 
 
 // Route::get('/noticias', function () {
