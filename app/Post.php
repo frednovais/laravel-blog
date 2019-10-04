@@ -15,7 +15,7 @@ class Post extends Model
      * @var array
      */
     protected $fillable = [
-        'titulo', 'texto',
+        'titulo', 'texto','likes',
     ];
 
     /**
@@ -23,8 +23,8 @@ class Post extends Model
      *
      * @var array
      */
-    protected $hidden = [
-        'likes',
-    ];
-    
+    // protected $hidden = [
+    //     'likes',
+    // ];
+
 }
