@@ -80,7 +80,11 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Vai no Model buscar o registo de acordo com criterio
+        $post = Post::where("id", "=", $id)->first();
+
+        // Manda o objeto para a View para renderizar para o utilizador
+        return view("post.editform", ["post" => $post]);
     }
 
     /**

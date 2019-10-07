@@ -5,7 +5,7 @@
     @if(count($posts))
         <ul>
         @foreach($posts as $post)
-            <li><a href="/post-show/{{$post->id}}">{{$post->titulo}}</a></li>
+            <li><a href="/post-show/{{$post->id}}">{{$post->titulo}}</a> <a href="/post-edit/{{$post->id}}">editar</a></li>
         @endforeach
         </ul>
     @endif
