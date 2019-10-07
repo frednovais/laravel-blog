@@ -118,5 +118,5 @@ Route::get('/post-create',"PostController@create");
 // Processa o form
 Route::post('/post-store',"PostController@store");
 
-// Processa o form
-Route::get('/model-create',"PostController@create");
+// Lista os post registados
+Route::get('/post-index',"PostController@index");

@@ -14,7 +14,13 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        
+        // Busca todos os registos no Model
+        $posts = Post::all();
+        
+        // Passa os registos para a View
+        return view("post.index",["posts" => $posts]);
+
     }
 
     /**
@@ -24,7 +30,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        
+        // Retorna a View
         return view("post.form");
 
     }
@@ -38,13 +45,16 @@ class PostController extends Controller
     public function store(Request $request)
     {
 
+        // Faz a criação do registro na Model
         Post::create([
             'titulo'        => $request->titulo,
             'texto'         => $request->texto,
             'likes'         => 1
         ]);
 
+        // Retorna a View com a mensagem
         return view("model-env", ["texto" => ("Post Criado")]);
+
     }
 
     /**
