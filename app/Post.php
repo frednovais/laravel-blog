@@ -15,16 +15,6 @@ class Post extends Model
      * @var array
      */
     protected $fillable = [
-        'titulo', 'texto','likes',
+        'titulo', 'texto', 'likes',
     ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    // protected $hidden = [
-    //     'likes',
-    // ];
-
 }

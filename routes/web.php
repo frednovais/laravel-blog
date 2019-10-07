@@ -109,6 +109,14 @@ Route::post('/search', "SearchController@pesquisa");
 
 Route::get('/noticias',"NoticiasController@index");
 
+// Rota para pegar o valor da variavel no arquivo .env
 Route::get('/model-env',"EnvController@index");
 
+// Exibe o Form para criar o Post
+Route::get('/post-create',"PostController@create");
+
+// Processa o form
+Route::post('/post-store',"PostController@store");
+
+// Processa o form
 Route::get('/model-create',"PostController@create");

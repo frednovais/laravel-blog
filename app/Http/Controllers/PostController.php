@@ -25,13 +25,7 @@ class PostController extends Controller
     public function create()
     {
         //
-        Post::create([
-            'titulo'        => "titulo de teste",
-            'texto'         => "texto para teste",
-            'likes'         => 1
-        ]);
-
-        return view("model-env", ["texto" => ("Post Criado")]);
+        return view("post.form");
 
     }
 
@@ -43,7 +37,14 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        Post::create([
+            'titulo'        => $request->titulo,
+            'texto'         => $request->texto,
+            'likes'         => 1
+        ]);
+
+        return view("model-env", ["texto" => ("Post Criado")]);
     }
 
     /**
