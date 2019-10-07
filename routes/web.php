@@ -129,3 +129,6 @@ Route::get('/post-edit/{id}',"PostController@edit");
 
 // Update de Post
 Route::post('/post-update/{id}',"PostController@update");
+
+// Delete de Post
+Route::get('/post-delete/{id}',"PostController@destroy");

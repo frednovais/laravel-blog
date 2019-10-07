@@ -118,6 +118,14 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        // Busca o registo na Model
+        $post = Post::find($id);
+
+        // Faz o Delete
+        $post->forceDelete();
+
+        // Retorna a lista
+        return $this->index();
     }
 }
