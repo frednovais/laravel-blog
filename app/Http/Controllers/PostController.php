@@ -96,7 +96,18 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Busca o registo na Model
+        $post = Post::find($id);
+
+        // FAz as alterações no objecto
+        $post->titulo = $request->titulo;
+        $post->texto  = $request->texto;
+
+        // Salva as alterações no objecto
+        $post->save();
+
+        // Retorna a lista
+        return $this->index();
     }
 
     /**

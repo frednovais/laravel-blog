@@ -126,3 +126,6 @@ Route::get('/post-show/{id}',"PostController@show");
 
 // Edição de Post
 Route::get('/post-edit/{id}',"PostController@edit");
+
+// Update de Post
+Route::post('/post-update/{id}',"PostController@update");
