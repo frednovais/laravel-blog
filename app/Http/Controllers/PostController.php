@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        
+
         // Busca todos os registos no Model
         $posts = Post::all();
         
@@ -65,7 +65,11 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        // Vai no Model buscar o registo de acordo com criterio
+        $post = Post::where("id", "=", $id)->first();
+
+        // Manda o objeto para a View para renderizar para o utilizador
+        return view("post.show", ["post" => $post]);
     }
 
     /**

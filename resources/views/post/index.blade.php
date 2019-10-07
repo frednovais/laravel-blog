@@ -3,8 +3,11 @@
 @section("content")
     <H1>Posts Cadastrados</H1>
     @if(count($posts))
+        <ul>
         @foreach($posts as $post)
-            <li><a href="">{{$post->titulo}}</a></li>
+            <li><a href="/post-show/{{$post->id}}">{{$post->titulo}}</a></li>
         @endforeach
+        </ul>
     @endif
+    <span> >>> Escolha um link para ir para a rota de detalhe <<<</span>
 @endsection
