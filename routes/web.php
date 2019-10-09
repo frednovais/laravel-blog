@@ -38,6 +38,15 @@ Route::group(["prefix" => "noticias"], function () {
 
 });
 
+Route::get('/noticia/{id}', function ($id) {
+    return "Noticia apenas com ID $id ";
+});
+
+Route::get('/noticia/{id}/{titulo}', function ($id , $titulo) {
+    return "Noticia com ID $id e titulo $titulo";
+});
+
+
 Route::get('/contacto', function () {
     return view('contactoform');
 });
@@ -107,13 +116,7 @@ Route::post('/search1', function () {
     return view("pesquisaresult", ['texto' => $_POST["name"]]);//'<div> Pesquisa por : '..'</div>';
 });
 
-// Route::get('/noticias/{id}', function ($id) {
-//     return "Noticia apenas com ID $id ";
-// });
 
-// Route::get('/noticias/{id}/{titulo}', function ($id , $titulo) {
-//     return "Noticia com ID $id e titulo $titulo";
-// });
 
 
 Route::get('/search', "SearchController@index");
