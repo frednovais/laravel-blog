@@ -140,6 +140,7 @@ Route::post('/post-store',"PostController@store");
 // Lista os post registados
 Route::get('/post-index',"PostController@index");
 
+// Slide 168
 // Detalhe de Post
 Route::get('/post-show/{id}',"PostController@show");
 
