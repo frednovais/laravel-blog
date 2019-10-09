@@ -8,7 +8,7 @@
             <li>
                 <a href="/post-show/{{$post->id}}">{{$post->titulo}}</a>
                 <a href="/post-delete/{{$post->id}}">deletar de vez</a> 
-                <a href="/post-softdelete/{{$post->id}}">recuperar</a>
+                <a href="/post-recoverysoftdelete/{{$post->id}}">recuperar</a>
             </li>
         @endforeach
         </ul>

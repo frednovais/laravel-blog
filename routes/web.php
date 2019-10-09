@@ -175,7 +175,10 @@ Route::post('/pesquisablog',"PostController@search");
 // SoftDelete de Post
 Route::get('/post-softdelete/{id}',"PostController@softdelete");
 
-
-// Slide 164
-// Lista os post deletados
+// Slide 210
+// Lista os registos deletados
 Route::get('/post-indexsoftdelete',"PostController@indexsoftdelete");
+
+// Slide 212
+// Recupera o registo com softdelete
+Route::get('/post-recoverysoftdelete/{id}',"PostController@recoverysoftdelete");

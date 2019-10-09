@@ -185,11 +185,23 @@ class PostController extends Controller
     public function indexsoftdelete()
     {
 
-        // Busca todos os registos no Model
+        // Busca todos os registos apagados no Model
         $posts = Post::onlyTrashed()->get();
         
         // Passa os registos para a View
         return view("post.indexsoftdelete",["posts" => $posts]);
+
+    }
+
+    public function recoverysoftdelete($id)
+    {
+
+        // Busca os registo apagados no Model
+        $post = Post::onlyTrashed()->find($id);
+
+        $post->restore();
+        
+        return $this->indexsoftdelete();
 
     }
 }
