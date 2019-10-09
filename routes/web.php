@@ -128,6 +128,7 @@ Route::get('/noticiascontroller',"NoticiasController@index");
 // Rota para pegar o valor da variavel no arquivo .env
 Route::get('/model-env',"EnvController@index");
 
+// Slide 157
 // Exibe o Form para criar o Post
 Route::get('/post-create',"PostController@create");
 
