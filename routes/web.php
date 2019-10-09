@@ -63,6 +63,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Slide 87 - View usando Blade e enviado parametro para View
+
 //http://127.0.0.1:8000/parameter
 Route::get('/parameter', function () {
     return view('wecolmename', ['name' => 'João']);

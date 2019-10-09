@@ -9,7 +9,6 @@
 @endsection
 
 @section('content')
-    <h1>Ficheiro home.blade.php</h1>
     @isset($name)
     Hello, {{ $name }}.
     @endisset
