@@ -115,15 +115,16 @@ Route::get('/homenoticias', function () {
     return view("noticias", compact("links"));
 });
 
-// Slide 117 Rotas com Controller
+// Slide 117 Rotas com Controller e Exercicio Slide 124
 
 //http://127.0.0.1:8000/searchcontroller
 Route::get('/searchcontroller', "SearchController@index");
 Route::post('/searchcontroller', "SearchController@pesquisa");
 
-// Slide 117 Rotas com Controller
+// Slide 123 Rotas com Controller
 Route::get('/noticiascontroller',"NoticiasController@index");
 
+// Slide 132
 // Rota para pegar o valor da variavel no arquivo .env
 Route::get('/model-env',"EnvController@index");
 
