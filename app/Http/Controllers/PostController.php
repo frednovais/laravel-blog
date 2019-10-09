@@ -181,4 +181,15 @@ class PostController extends Controller
         return $this->index();
     }
     
+    
+    public function indexsoftdelete()
+    {
+
+        // Busca todos os registos no Model
+        $posts = Post::onlyTrashed()->get();
+        
+        // Passa os registos para a View
+        return view("post.indexsoftdelete",["posts" => $posts]);
+
+    }
 }

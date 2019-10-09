@@ -21,6 +21,9 @@
         <li><a href="/blog">Slide 185 - Model - Home do Blog</a></li>
         <li><a href="/blogcomsql">Slide 190 - Model - Home do Blog usando SQL</a></li>
         <li><a href="/pesquisablog">Slide 190 - Model - Pesquisa com Model</a></li>
+        <li><a href="/post-index">Slide 205 - Model - SoftDelete</a></li>
+        <li><a href="/post-indexsoftdelete">Slide 205 - Model - Ver Registos com SoftDelete</a></li>
+        
         
     </ul>
 </div>
