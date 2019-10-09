@@ -11,7 +11,7 @@
         <li><a target="_blank" href="/contacto">Slide 90 - View usando Blade com ficheiro dentro da pasta por defeito</a></li>
         <li><a target="_blank" href="/contacto2">Slide 90 - View usando Blade com ficheiro dentro da pasta contacto</a></li>
         <li><a href="/pesquisa">Slide 95 - CSRF Protection</a></li>
-
+        <li><a href="/search">Slide 97 - Exercicio com Blade + CSRF</a></li>
         <li><a href="/model-env">Model - Busacando o conteudo da variavel no Env</a></li>
         <li><a href="/post-create">Model - Novo Post (Insert)</a></li>
         <li><a href="/post-index">Model - Lista de Posts (Show, Update, Edit e Delete)</a></li>

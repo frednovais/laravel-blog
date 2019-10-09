@@ -70,18 +70,22 @@ Route::get('/parameter', function () {
     return view('wecolmename', ['name' => 'João']);
 });
 
+// Slide 90 - View usando Blade em diretorios diferentes
 
-
+//http://127.0.0.1:8000/contacto
 Route::get('/contacto', function () {
     return view('contactoform');
 });
 
+//http://127.0.0.1:8000/contacto2
 Route::get('/contacto2', function () {
     return view('contacto.form');
 });
 
 
+// Slide 95 - CSRF Protection em Forms
 
+//http://127.0.0.1:8000/pesquisa
 Route::get('/pesquisa', function () {
     return view('pesquisa');
 });
@@ -91,6 +95,15 @@ Route::post('/pesquisa', function () {
 });
 
 
+// Slide 97 - Exercicio
+//http://127.0.0.1:8000/search
+Route::get('/search', function () {
+    return view("searchform");
+});
+
+Route::post('/search', function () {
+    return view("searchresult", ['q' => " asds das".$_POST["q"]]);//'<div> Pesquisa por : '..'</div>';
+});
 
 
 Route::get('/login1', function () {
@@ -132,9 +145,9 @@ Route::post('/search1', function () {
 
 
 
-Route::get('/search', "SearchController@index");
+// Route::get('/search', "SearchController@index");
 
-Route::post('/search', "SearchController@pesquisa");
+// Route::post('/search', "SearchController@pesquisa");
 
 
 // Route::get('/noticias', function () {
