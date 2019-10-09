@@ -11,10 +11,14 @@
 |
 */
 
+// Slide 71 - Rotas
+Route::get('/login', function(){
+    return "Login";
+});
 
-
-
-
+Route::post('/login', function(){
+    return "Logado";
+});
 
 
 Route::get('/contacto', function () {
@@ -50,11 +54,11 @@ Route::get('/home', function () {
 
 
 
-Route::get('/login', function () {
+Route::get('/login1', function () {
     return 'Formulario de Login';
 });
 
-Route::post('/login', function () {
+Route::post('/login1', function () {
     return 'Login Efetuado!';
 });
 
