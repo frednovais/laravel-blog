@@ -153,4 +153,19 @@ class PostController extends Controller
         return view("post.home",["posts" => $posts]);
 
     }
+
+
+    public function search(Request $request)
+    {
+
+        // Busca todos os registos no Model
+        $posts = DB::table('posts')
+                    ->where('texto', 'like', "%{$request->pesquisa}%")
+                    ->get();
+        
+        // Passa os registos para a View
+        return view("post.home",["posts" => $posts, "pesquisa" => $request->pesquisa]);
+
+    }
+    
 }

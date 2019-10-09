@@ -19,7 +19,9 @@
         <li><a href="/post-create">Slide 157 - Model - Novo Post (Insert)</a></li>
         <li><a href="/post-index">Slide 164 - Model - Lista de Posts (Show, Update, Edit e Delete)</a></li>
         <li><a href="/blog">Slide 185 - Model - Home do Blog</a></li>
-        <li><a href="/blogcomsql">Slide 189 - Model - Home do Blog usando SQL</a></li>
+        <li><a href="/blogcomsql">Slide 190 - Model - Home do Blog usando SQL</a></li>
+        <li><a href="/pesquisablog">Slide 190 - Model - Pesquisa com Model</a></li>
+        
     </ul>
 </div>
 

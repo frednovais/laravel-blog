@@ -159,8 +159,14 @@ Route::post('/post-update/{id}',"PostController@update");
 // Delete de Post
 Route::get('/post-delete/{id}',"PostController@destroy");
 
-// Post registados
+// Slide 186
+// Post registados na home
 Route::get('/blog',"PostController@home");
 
-// Post registados com SQL
+// Slide 190
+// Post registados na home com SQL
 Route::get('/blogcomsql',"PostController@homecomsql");
+
+// Slide 194
+// Pesquisa com Model
+Route::post('/pesquisablog',"PostController@search");
