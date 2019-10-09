@@ -158,3 +158,8 @@ Route::post('/post-update/{id}',"PostController@update");
 // Slide 182
 // Delete de Post
 Route::get('/post-delete/{id}',"PostController@destroy");
+
+
+
+// Lista os post registados
+Route::get('/blog',"PostController@home");

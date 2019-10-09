@@ -18,6 +18,7 @@
         <li><a href="/model-env">Slide 132 - Model - Busacando o conteudo da variavel no Env</a></li>
         <li><a href="/post-create">Slide 157 - Model - Novo Post (Insert)</a></li>
         <li><a href="/post-index">Slide 164 - Model - Lista de Posts (Show, Update, Edit e Delete)</a></li>
+        <li><a href="/blog">Slide 164 - Model - Home do Blog)</a></li>
     </ul>
 </div>
 

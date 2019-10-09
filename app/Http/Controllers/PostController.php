@@ -128,4 +128,15 @@ class PostController extends Controller
         // Retorna a lista
         return $this->index();
     }
+
+    public function home()
+    {
+
+        // Busca todos os registos no Model
+        $posts = Post::all();
+        
+        // Passa os registos para a View
+        return view("post.home",["posts" => $posts]);
+
+    }
 }
