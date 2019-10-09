@@ -132,6 +132,7 @@ Route::get('/model-env',"EnvController@index");
 // Exibe o Form para criar o Post
 Route::get('/post-create',"PostController@create");
 
+// Slide 161
 // Processa o form
 Route::post('/post-store',"PostController@store");
 
