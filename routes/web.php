@@ -148,6 +148,7 @@ Route::get('/post-show/{id}',"PostController@show");
 // Edição de Post
 Route::get('/post-edit/{id}',"PostController@edit");
 
+// Slide 178
 // Update de Post
 Route::post('/post-update/{id}',"PostController@update");
 
