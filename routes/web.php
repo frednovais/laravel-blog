@@ -170,3 +170,8 @@ Route::get('/blogcomsql',"PostController@homecomsql");
 // Slide 194
 // Pesquisa com Model
 Route::post('/pesquisablog',"PostController@search");
+
+// Slide 182
+// SoftDelete de Post
+Route::get('/post-softdelete/{id}',"PostController@softdelete");
+

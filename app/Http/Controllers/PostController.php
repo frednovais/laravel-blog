@@ -167,5 +167,18 @@ class PostController extends Controller
         return view("post.home",["posts" => $posts, "pesquisa" => $request->pesquisa]);
 
     }
+
+    public function softdelete($id)
+    {
+
+        // Busca o registo na Model
+        $post = Post::find($id);
+
+        // Faz o Delete
+        $post->delete();
+
+        // Retorna a lista
+        return $this->index();
+    }
     
 }
