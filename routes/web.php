@@ -144,6 +144,7 @@ Route::get('/post-index',"PostController@index");
 // Detalhe de Post
 Route::get('/post-show/{id}',"PostController@show");
 
+// Slide 173
 // Edição de Post
 Route::get('/post-edit/{id}',"PostController@edit");
 
