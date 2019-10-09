@@ -152,5 +152,6 @@ Route::get('/post-edit/{id}',"PostController@edit");
 // Update de Post
 Route::post('/post-update/{id}',"PostController@update");
 
+// Slide 182
 // Delete de Post
 Route::get('/post-delete/{id}',"PostController@destroy");
