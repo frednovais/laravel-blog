@@ -105,7 +105,7 @@ Route::post('/search', function () {
     return view("searchresult", ['q' => " asds das".$_POST["q"]]);//'<div> Pesquisa por : '..'</div>';
 });
 
-// Slide 108, 113 e 114
+// Slide 108, 112, 113 e 114 Foreach, comentários e codigo PHP no Blade
 
 //http://127.0.0.1:8000/homenoticias
 Route::get('/homenoticias', function () {
@@ -115,49 +115,10 @@ Route::get('/homenoticias', function () {
     return view("noticias", compact("links"));
 });
 
+//http://127.0.0.1:8000/searchcontroller
+Route::get('/searchcontroller', "SearchController@index");
 
-Route::get('/login1', function () {
-    return 'Formulario de Login';
-});
-
-Route::post('/login1', function () {
-    return 'Login Efetuado!';
-});
-
-// Route::group(["prefix" => "noticias"], function () {
-
-//     Route::get('/', function () {
-//         return 'Home das Notícias';
-//     });
-
-//     Route::get('/desporto', function () {
-//         return 'Desporto';
-//     });
-
-//     Route::post('/porto', function () {
-//         return 'Noticias do Porto !';
-//     });
-// });
-
-
-Route::get('/registo', function () {
-    return 'Registo';
-});
-
-Route::get('/search1', function () {
-    return view("pesquisa");
-});
-
-Route::post('/search1', function () {
-    return view("pesquisaresult", ['texto' => $_POST["name"]]);//'<div> Pesquisa por : '..'</div>';
-});
-
-
-
-
-// Route::get('/search', "SearchController@index");
-
-// Route::post('/search', "SearchController@pesquisa");
+Route::post('/searchcontroller', "SearchController@pesquisa");
 
 
 // Route::get('/noticias', function () {

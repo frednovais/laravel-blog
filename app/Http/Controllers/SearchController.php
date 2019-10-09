@@ -6,11 +6,10 @@ use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
-    //SearchController@index
     
     public function index(){
         
-        return view("searchform");
+        return view("searchcontrollerform");
         
     }
     

@@ -13,9 +13,17 @@
         <li><a href="/pesquisa">Slide 95 - CSRF Protection</a></li>
         <li><a href="/search">Slide 97 - Exercicio com Blade + CSRF</a></li>
         <li><a href="/homenoticias">Slide 108 - Blade com Foreach</a></li>
+        <li><a href="/searchcontroller">Slide 117 - Rotas com Controller</a></li>
+        
         <li><a href="/model-env">Model - Busacando o conteudo da variavel no Env</a></li>
         <li><a href="/post-create">Model - Novo Post (Insert)</a></li>
         <li><a href="/post-index">Model - Lista de Posts (Show, Update, Edit e Delete)</a></li>
     </ul>
 </div>
+
+<style>
+.links ul {
+  text-align: left;
+}
+</style>
 
