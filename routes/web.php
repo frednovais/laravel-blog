@@ -1,17 +1,14 @@
 <?php
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
+
+Slide disponivel no seguinte endereço: 
+
+https://docs.google.com/presentation/d/1YZfe2zRLgSRN6M9GRlsl7S9LGNsUewEx7xbcqMBNtoE/edit?usp=sharing
+
 */
 
-// Slide 71 - Rotas
+// Slide 71 ou 76 - Rotas
 Route::get('/login', function(){
     return "Login";
 });
@@ -20,6 +17,26 @@ Route::post('/login', function(){
     return "Logado";
 });
 
+
+// Slide 77 - Rotas Agrupadas
+Route::group(["prefix" => "noticias"], function () {
+    
+    // http://127.0.0.1:8000/noticias/
+    Route::get('/', function () {
+        return "Home das noticias <br><a href=desporto>Rota para Desporto</a><br><a href=porto>Rota para Porto</a><br>";
+    });
+
+    // http://127.0.0.1:8000/noticias/desporto/
+    Route::get('/desporto', function () {
+        return "Noticias sobre Desporto";
+    });
+    
+    // http://127.0.0.1:8000/noticias/porto/
+    Route::get('/porto', function () {
+        return "Noticias sobre o Porto";
+    });
+
+});
 
 Route::get('/contacto', function () {
     return view('contactoform');
@@ -90,13 +107,13 @@ Route::post('/search1', function () {
     return view("pesquisaresult", ['texto' => $_POST["name"]]);//'<div> Pesquisa por : '..'</div>';
 });
 
-Route::get('/noticias/{id}', function ($id) {
-    return "Noticia apenas com ID $id ";
-});
+// Route::get('/noticias/{id}', function ($id) {
+//     return "Noticia apenas com ID $id ";
+// });
 
-Route::get('/noticias/{id}/{titulo}', function ($id , $titulo) {
-    return "Noticia com ID $id e titulo $titulo";
-});
+// Route::get('/noticias/{id}/{titulo}', function ($id , $titulo) {
+//     return "Noticia com ID $id e titulo $titulo";
+// });
 
 
 Route::get('/search', "SearchController@index");
@@ -111,7 +128,7 @@ Route::post('/search', "SearchController@pesquisa");
 //     return view("noticias", compact("links"));
 // });
 
-Route::get('/noticias',"NoticiasController@index");
+//Route::get('/noticias',"NoticiasController@index");
 
 // Rota para pegar o valor da variavel no arquivo .env
 Route::get('/model-env',"EnvController@index");
