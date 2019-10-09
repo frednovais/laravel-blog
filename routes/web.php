@@ -9,6 +9,7 @@ https://docs.google.com/presentation/d/1YZfe2zRLgSRN6M9GRlsl7S9LGNsUewEx7xbcqMBN
 */
 
 // Slide 71 ou 76 - Rotas
+//http://127.0.0.1:8000/login/
 Route::get('/login', function(){
     return "Login";
 });
@@ -23,7 +24,7 @@ Route::group(["prefix" => "noticias"], function () {
     
     // http://127.0.0.1:8000/noticias/
     Route::get('/', function () {
-        return "Home das noticias <br><a href=desporto>Rota para Desporto</a><br><a href=porto>Rota para Porto</a><br>";
+        return "Home das noticias <br><a href=/noticias/desporto>Rota para Desporto</a><br><a href=/noticias/porto>Rota para Porto</a><br>";
     });
 
     // http://127.0.0.1:8000/noticias/desporto/
@@ -38,13 +39,35 @@ Route::group(["prefix" => "noticias"], function () {
 
 });
 
+// Slide 79 - Rotas com parametros
+//http://127.0.0.1:8000/noticia/123
 Route::get('/noticia/{id}', function ($id) {
     return "Noticia apenas com ID $id ";
 });
 
+//http://127.0.0.1:8000/noticia/123/titulo
 Route::get('/noticia/{id}/{titulo}', function ($id , $titulo) {
     return "Noticia com ID $id e titulo $titulo";
 });
+
+
+// Slide 85 - View usando Blade
+
+//http://127.0.0.1:8000/home
+Route::get('/home', function () {
+    return view('home');
+});
+
+//http://127.0.0.1:8000/
+Route::get('/', function () {
+    return view('welcome');
+});
+
+//http://127.0.0.1:8000/parameter
+Route::get('/parameter', function () {
+    return view('wecolmename', ['name' => 'João']);
+});
+
 
 
 Route::get('/contacto', function () {
@@ -65,18 +88,6 @@ Route::post('/pesquisa', function () {
     return view('pesquisaresult', ['texto' => $_POST["name"]]);
 });
 
-
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/home', function () {
-    return view('wecolmename', ['name' => 'João']);
-});
 
 
 
