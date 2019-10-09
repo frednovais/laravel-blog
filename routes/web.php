@@ -136,6 +136,7 @@ Route::get('/post-create',"PostController@create");
 // Processa o form
 Route::post('/post-store',"PostController@store");
 
+// Slide 164
 // Lista os post registados
 Route::get('/post-index',"PostController@index");
 
