@@ -24,16 +24,16 @@ Route::group(["prefix" => "noticias"], function () {
     
     // http://127.0.0.1:8000/noticias/
     Route::get('/', function () {
-        return "Home das noticias <br><a href=/noticias/desporto>Rota para Desporto</a><br><a href=/noticias/porto>Rota para Porto</a><br>";
+        return "Home das noticias <br><a href=/noticias/Desporto>Rota para Desporto</a><br><a href=/noticias/Porto>Rota para Porto</a><br>";
     });
 
     // http://127.0.0.1:8000/noticias/desporto/
-    Route::get('/desporto', function () {
+    Route::get('/Desporto', function () {
         return "Noticias sobre Desporto";
     });
     
     // http://127.0.0.1:8000/noticias/porto/
-    Route::get('/porto', function () {
+    Route::get('/Porto', function () {
         return "Noticias sobre o Porto";
     });
 
@@ -115,20 +115,14 @@ Route::get('/homenoticias', function () {
     return view("noticias", compact("links"));
 });
 
+// Slide 117 Rotas com Controller
+
 //http://127.0.0.1:8000/searchcontroller
 Route::get('/searchcontroller', "SearchController@index");
-
 Route::post('/searchcontroller', "SearchController@pesquisa");
 
-
-// Route::get('/noticias', function () {
-
-//     $links = ["Desporto", "Tempo", "Porto", "Braga"];
-
-//     return view("noticias", compact("links"));
-// });
-
-//Route::get('/noticias',"NoticiasController@index");
+// Slide 117 Rotas com Controller
+Route::get('/noticiascontroller',"NoticiasController@index");
 
 // Rota para pegar o valor da variavel no arquivo .env
 Route::get('/model-env',"EnvController@index");
