@@ -18,6 +18,9 @@ Route::post('/login', function(){
     return "Logado";
 });
 
+Route::get('/registo', function () {
+    return 'Registo';
+});
 
 // Slide 77 - Rotas Agrupadas
 Route::group(["prefix" => "noticias"], function () {
@@ -140,7 +143,7 @@ Route::post('/post-store',"PostController@store");
 // Lista os post registados
 Route::get('/post-index',"PostController@index");
 
-// Slide 168
+// Slide 168 
 // Detalhe de Post
 Route::get('/post-show/{id}',"PostController@show");
 
