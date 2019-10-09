@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Post;
 
@@ -134,6 +135,19 @@ class PostController extends Controller
 
         // Busca todos os registos no Model
         $posts = Post::all();
+        
+        // Passa os registos para a View
+        return view("post.home",["posts" => $posts]);
+
+    }
+
+    public function homecomsql()
+    {
+
+        // Busca todos os registos no BAnco com comando SQL normal
+        $posts = DB::select(
+            DB::raw('SELECT * FROM posts')
+        );
         
         // Passa os registos para a View
         return view("post.home",["posts" => $posts]);

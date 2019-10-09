@@ -159,7 +159,8 @@ Route::post('/post-update/{id}',"PostController@update");
 // Delete de Post
 Route::get('/post-delete/{id}',"PostController@destroy");
 
-
-
-// Lista os post registados
+// Post registados
 Route::get('/blog',"PostController@home");
+
+// Post registados com SQL
+Route::get('/blogcomsql',"PostController@homecomsql");
