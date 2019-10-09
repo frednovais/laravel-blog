@@ -6,8 +6,8 @@
         <li><a target="_blank" href="/noticias/Porto">Slide 77 - Rotas Agrupadas Porto</a></li>
         <li><a target="_blank" href="/noticia/123">Slide 79 - Rotas com parametros ID</a></li>
         <li><a href="/">Slide 85 - View usando Blade Rota (/)</a></li>
-        <li><a href="/home">Slide 85 - View usando Blade Rota (/home)</a></li>
-        <li><a href="/parameter">Slide 87 - View usando Blade com parametros</a></li>
+        <li><a target="_blank" href="/home">Slide 85 - View usando Blade Rota (/home)</a></li>
+        <li><a target="_blank" href="/parameter">Slide 87 - View usando Blade com parametros</a></li>
         <li><a target="_blank" href="/contacto">Slide 90 - View usando Blade com ficheiro dentro da pasta por defeito</a></li>
         <li><a target="_blank" href="/contacto2">Slide 90 - View usando Blade com ficheiro dentro da pasta contacto</a></li>
         <li><a href="/pesquisa">Slide 95 - CSRF Protection</a></li>
@@ -15,8 +15,6 @@
         <li><a href="/homenoticias">Slide 108 - Blade com Foreach</a></li>
         <li><a href="/searchcontroller">Slide 117 - Rotas com Controller</a></li>
         <li><a href="/noticiascontroller">Slide 122 - Rotas com Controller</a></li>
-        
-        
         <li><a href="/model-env">Slide 132 - Model - Busacando o conteudo da variavel no Env</a></li>
         <li><a href="/post-create">Slide 157 - Model - Novo Post (Insert)</a></li>
         <li><a href="/post-index">Slide 164 - Model - Lista de Posts (Show, Update, Edit e Delete)</a></li>
