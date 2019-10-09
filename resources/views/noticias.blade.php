@@ -6,7 +6,7 @@
 
 
     @php
-        echo "<h1>teste</h1>";
+        echo "<h1>Comando echo php dentro do Blade</h1>";
     @endphp
     <h1>Noticias</h1>
     @if(count($links))

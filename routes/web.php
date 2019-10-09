@@ -105,6 +105,16 @@ Route::post('/search', function () {
     return view("searchresult", ['q' => " asds das".$_POST["q"]]);//'<div> Pesquisa por : '..'</div>';
 });
 
+// Slide 108, 113 e 114
+
+//http://127.0.0.1:8000/homenoticias
+Route::get('/homenoticias', function () {
+
+    $links = ["Desporto", "Tempo", "Porto", "Braga"];
+
+    return view("noticias", compact("links"));
+});
+
 
 Route::get('/login1', function () {
     return 'Formulario de Login';
